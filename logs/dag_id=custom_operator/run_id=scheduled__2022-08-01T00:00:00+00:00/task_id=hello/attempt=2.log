@@ -1,0 +1,13 @@
+[2023-05-11T23:23:54.774+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: custom_operator.hello scheduled__2022-08-01T00:00:00+00:00 [queued]>
+[2023-05-11T23:23:54.798+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: custom_operator.hello scheduled__2022-08-01T00:00:00+00:00 [queued]>
+[2023-05-11T23:23:54.799+0000] {taskinstance.py:1331} INFO - Starting attempt 2 of 2
+[2023-05-11T23:23:54.842+0000] {taskinstance.py:1350} INFO - Executing <Task(HelloOperator): hello> on 2022-08-01 00:00:00+00:00
+[2023-05-11T23:23:54.855+0000] {standard_task_runner.py:57} INFO - Started process 199 to run task
+[2023-05-11T23:23:54.870+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'custom_operator', 'hello', 'scheduled__2022-08-01T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/4-custom_operator.py', '--cfg-path', '/tmp/tmpfvn8i0lz']
+[2023-05-11T23:23:54.872+0000] {standard_task_runner.py:85} INFO - Job 25: Subtask hello
+[2023-05-11T23:23:55.092+0000] {task_command.py:410} INFO - Running <TaskInstance: custom_operator.hello scheduled__2022-08-01T00:00:00+00:00 [running]> on host c0efdbf3c401
+[2023-05-11T23:23:55.335+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='custom_operator' AIRFLOW_CTX_TASK_ID='hello' AIRFLOW_CTX_EXECUTION_DATE='2022-08-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-08-01T00:00:00+00:00'
+[2023-05-11T23:23:55.337+0000] {logging_mixin.py:149} INFO - hola freddy
+[2023-05-11T23:23:55.359+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=custom_operator, task_id=hello, execution_date=20220801T000000, start_date=20230511T232354, end_date=20230511T232355
+[2023-05-11T23:23:55.427+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-11T23:23:55.473+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
